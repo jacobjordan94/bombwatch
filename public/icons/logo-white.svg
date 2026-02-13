@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="3 0 58 63" fill="none">
+  <!-- Bomb body -->
+  <circle cx="32" cy="40" r="22" fill="#ffffff" stroke="#aaaaaa" stroke-width="1"/>
+
+  <!-- Fuse hole -->
+  <ellipse cx="32" cy="19" rx="5" ry="2.5" fill="#aaaaaa"/>
+
+  <!-- Fuse outline -->
+  <path d="M32 19 Q27 16 31 13 Q35 10 33 9" stroke="#aaaaaa" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+  <!-- Fuse -->
+  <path d="M32 19 Q27 16 31 13 Q35 10 33 9" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+  <!-- Flame -->
+  <path d="M33 9 Q28 4 33 1 Q38 4 33 9" fill="#ffffff" stroke="#aaaaaa" stroke-width="1"/>
+
+  <!-- Binocular barrel housings -->
+  <rect x="4" y="24" width="25" height="18" rx="3" fill="#cccccc" stroke="#aaaaaa" stroke-width="1"/>
+  <rect x="35" y="24" width="25" height="18" rx="3" fill="#cccccc" stroke="#aaaaaa" stroke-width="1"/>
+
+  <!-- Bridge -->
+  <rect x="23.896654" y="26.799217" width="16" height="12.440939" rx="2" fill="#cccccc" stroke="#aaaaaa" stroke-width="1"/>
+
+  <!-- Lens bezels -->
+  <circle cx="16" cy="33" r="10.5" fill="#d5d5d5" stroke="#aaaaaa" stroke-width="1"/>
+  <circle cx="48" cy="33" r="10.5" fill="#d5d5d5" stroke="#aaaaaa" stroke-width="1"/>
+
+  <!-- Lens rims -->
+  <circle cx="16" cy="33" r="9" fill="#f2f2f2"/>
+  <circle cx="48" cy="33" r="9" fill="#f2f2f2"/>
+
+  <!-- Lens glass -->
+  <circle cx="16" cy="33" r="6.5" fill="#e5e5e5"/>
+  <circle cx="48" cy="33" r="6.5" fill="#e5e5e5"/>
+</svg>
