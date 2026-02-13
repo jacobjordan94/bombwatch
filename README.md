@@ -1,10 +1,12 @@
 <div align="center">
   <img src="public/icons/logo-color.svg" height="72" align="center">
 </div>
-&nbsp;
-<p align="center">
-  <strong style="font-size:2.5em;"> BombWatch</strong>
-</p>
+
+<div align="center">
+
+# BombWatch
+</div>
+
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
