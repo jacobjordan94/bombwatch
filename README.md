@@ -67,6 +67,7 @@ Then load the `dist/` folder in your browser:
 npm run dev        # Start dev server with HMR
 npm run build      # Production build to dist/
 npm run lint       # Run ESLint
+npm run deploy     # Runs build and creates .zip (requires 7z)
 ```
 
 ## License
