@@ -1,7 +1,9 @@
+<div align="center">
+  <img src="public/icons/logo-color.svg" height="72" align="center">
+</div>
+&nbsp;
 <p align="center">
-  <img src="public/icons/logo-color.svg" height="43" align="center">
-  &nbsp;&nbsp;&nbsp;
-  <strong style="font-size:2em;"> BombWatch</strong>
+  <strong style="font-size:2.5em;"> BombWatch</strong>
 </p>
 
 <p align="center">
