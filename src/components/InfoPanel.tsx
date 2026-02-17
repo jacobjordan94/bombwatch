@@ -33,7 +33,7 @@ const TECH_STACK: { name: string; description: string; url: string; icon: ReactN
   { name: "Vite", description: "Build tool", url: "https://vite.dev", icon: <TechIcon src="/tech-icons/vite.svg" alt="Vite" /> },
   { name: "Tailwind CSS", description: "Styling", url: "https://tailwindcss.com", icon: <TechIcon src="/tech-icons/tailwind.svg" alt="Tailwind CSS" /> },
   { name: "shadcn/ui", description: "Component library", url: "https://ui.shadcn.com", icon: <TechIcon src="/tech-icons/shadcn.svg" alt="shadcn/ui" className="dark:invert-100" /> },
-  { name: "Motion", description: "Animations", url: "https://m.dev", icon: <TechIcon src="/tech-icons/m.png" alt="Motion" /> },
+  { name: "Motion", description: "Animations", url: "https://motion.dev", icon: <TechIcon src="/tech-icons/motion.png" alt="Motion" /> },
   { name: "Luxon", description: "Date/time handling", url: "https://moment.github.io/luxon", icon: <TechIcon src="/tech-icons/luxon.png" alt="Luxon" /> },
   { name: "webextension-polyfill", description: "Cross-browser support", url: "https://github.com/mozilla/webextension-polyfill", icon: <TechIcon src="/tech-icons/moz.png" alt="webextension-polyfill" /> },
 ]
