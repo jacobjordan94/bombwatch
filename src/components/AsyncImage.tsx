@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { motion, AnimatePresence } from "motion/react"
+import { m, AnimatePresence } from "motion/react"
 import { cn } from "@/lib/utils"
 
 interface AsyncImageProps {
@@ -24,14 +24,14 @@ export function AsyncImage({ src, alt, className }: AsyncImageProps) {
     <div className={cn("relative overflow-hidden", className)}>
       <AnimatePresence>
         {!loaded && (
-          <motion.div
+          <m.div
             className="absolute inset-0 bg-muted animate-pulse"
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
           />
         )}
       </AnimatePresence>
-      <motion.img
+      <m.img
         src={src}
         alt={alt}
         onLoad={() => setLoaded(true)}

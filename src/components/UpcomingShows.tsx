@@ -1,5 +1,5 @@
 import { Calendar } from "lucide-react"
-import { AnimatePresence, motion } from "motion/react"
+import { AnimatePresence, m } from "motion/react"
 import type { UpcomingShow } from "@/types/giantbomb"
 import { Separator } from "@/components/ui/separator"
 import { ShowCard } from "@/components/ShowCard"
@@ -12,7 +12,7 @@ interface UpcomingShowsProps {
 
 export function UpcomingShows({ shows, isLive }: UpcomingShowsProps) {
   return (
-    <motion.div
+    <m.div
       className="space-y-2 pb-4 px-1"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -24,7 +24,7 @@ export function UpcomingShows({ shows, isLive }: UpcomingShowsProps) {
       </h3>
       <Separator className="mb-0 mt-2" />
       <AnimatePresence>
-        <motion.div
+        <m.div
           className="space-y-4 pt-4 px-1"
           variants={containerVariants}
           initial="hidden"
@@ -32,12 +32,12 @@ export function UpcomingShows({ shows, isLive }: UpcomingShowsProps) {
           layout
         >
           {shows.map((show) => (
-            <motion.div key={`${show.title}-${show.date}`} variants={itemVariants}>
+            <m.div key={`${show.title}-${show.date}`} variants={itemVariants}>
               <ShowCard show={show} />
-            </motion.div>
+            </m.div>
           ))}
-        </motion.div>
+        </m.div>
       </AnimatePresence>
-    </motion.div>
+    </m.div>
   )
 }

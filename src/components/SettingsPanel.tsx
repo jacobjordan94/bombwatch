@@ -3,7 +3,7 @@ import { Label } from "@/components/ui/label"
 import { NativeSelect, NativeSelectOption } from "@/components/ui/native-select"
 import { Separator } from "@/components/ui/separator"
 import { Settings } from "lucide-react"
-import { motion } from "motion/react"
+import { m } from "motion/react"
 import {
   getPollingInterval,
   setPollingInterval,
@@ -39,7 +39,7 @@ export function SettingsPanel() {
   return (
     <Page title="Settings" Icon={Settings} className="settings-page">
       <div className="space-y-2 flex-col">
-        <motion.div
+        <m.div
           className="space-y-2 flex justify-between items-center"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -57,11 +57,11 @@ export function SettingsPanel() {
               </NativeSelectOption>
             ))}
           </NativeSelect>
-        </motion.div>
+        </m.div>
 
         <Separator />
 
-        <motion.div
+        <m.div
           className="space-y-2 flex justify-between items-center"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -79,7 +79,7 @@ export function SettingsPanel() {
               </NativeSelectOption>
             ))}
           </NativeSelect>
-        </motion.div>
+        </m.div>
 
       </div>
     </Page>

@@ -1,12 +1,12 @@
 import { Radio } from "lucide-react";
 import { Badge } from "./ui/badge";
-import { motion } from "motion/react";
+import { m } from "motion/react";
 import type { ComponentProps } from "react";
 
 type LiveNowBadgeProps = ComponentProps<typeof Badge>;
 export default function LiveNowBadge({ className }: LiveNowBadgeProps) {
     return (
-        <motion.div
+        <m.div
             animate={{ opacity: [1, 0.5, 1] }}
             transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
             className={className}
@@ -15,6 +15,6 @@ export default function LiveNowBadge({ className }: LiveNowBadgeProps) {
                 <Radio className="size-3" />
                 LIVE NOW
             </Badge>
-        </motion.div>
+        </m.div>
     );
 }

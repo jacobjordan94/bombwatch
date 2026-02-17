@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { motion } from "motion/react"
+import { m } from "motion/react"
 import { AsyncImage } from "./AsyncImage"
 import type { LiveShow } from "@/types/giantbomb"
 
@@ -9,7 +9,7 @@ interface LiveNowProps {
 
 export function LiveNow({ show }: LiveNowProps) {
   return (
-      <motion.a
+      <m.a
         href="https://giantbomb.com/live/chat"
         className="block cursor-pointer pt-10 mx-1.5"
         target="_blank"
@@ -33,16 +33,16 @@ export function LiveNow({ show }: LiveNowProps) {
               </div>
             )}
             <CardContent className="space-y-3">
-              <motion.h2
+              <m.h2
                 className="text-lg font-semibold text-white"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.4, delay: 0.3 }}
               >
                 {show.title}
-              </motion.h2>
+              </m.h2>
             </CardContent>
           </Card>
-      </motion.a>
+      </m.a>
   )
 }

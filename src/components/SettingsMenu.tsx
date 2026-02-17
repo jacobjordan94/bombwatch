@@ -1,6 +1,6 @@
 import { RefreshCw, Settings } from "lucide-react";
 import { Button } from "./ui/button";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, m } from "motion/react";
 import { useNavigate } from "react-router";
 import browser from "webextension-polyfill";
 import useRefreshing from "@/lib/useRefreshing";
@@ -32,23 +32,23 @@ export default function SettingsMenu() {
             >
                 <AnimatePresence mode="wait">
                     {refreshing ? (
-                        <motion.span
+                        <m.span
                             key="refresh"
                             animate={{ rotate: 360 }}
                             transition={spinTransition}
                             exit={{ opacity: 0, transition: { duration: 0.3 } }}
                         >
                             <RefreshCw />
-                        </motion.span>
+                        </m.span>
                     ) : (
-                        <motion.span
+                        <m.span
                             key="settings"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.3 }}
                         >
                             <Settings />
-                        </motion.span>
+                        </m.span>
                     )}
                 </AnimatePresence>
             </PopoverTrigger>
@@ -73,23 +73,23 @@ export default function SettingsMenu() {
                 >
                     <AnimatePresence mode="wait">
                         {refreshing ? (
-                            <motion.span
+                            <m.span
                                 key="refresh-menu"
                                 animate={{ rotate: 360 }}
                                 transition={spinTransition}
                                 exit={{ opacity: 0, transition: { duration: 0.3 } }}
                             >
                                 <RefreshCw className="size-4" />
-                            </motion.span>
+                            </m.span>
                         ) : (
-                            <motion.span
+                            <m.span
                                 key="static-menu"
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ duration: 0.3 }}
                             >
                                 <RefreshCw className="size-4" />
-                            </motion.span>
+                            </m.span>
                         )}
                     </AnimatePresence>
                     {refreshing ? "Refreshing..." : "Refresh"}

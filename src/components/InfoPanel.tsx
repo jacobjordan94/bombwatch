@@ -1,7 +1,7 @@
 import { type ComponentProps, type ReactNode } from "react"
 import { Separator } from "@/components/ui/separator"
 import { Info, ExternalLink, Github, Globe, Code2 } from "lucide-react"
-import { motion } from "motion/react"
+import { m } from "motion/react"
 import { cn } from "@/lib/utils"
 import Page from "./Page"
 
@@ -33,7 +33,7 @@ const TECH_STACK: { name: string; description: string; url: string; icon: ReactN
   { name: "Vite", description: "Build tool", url: "https://vite.dev", icon: <TechIcon src="/tech-icons/vite.svg" alt="Vite" /> },
   { name: "Tailwind CSS", description: "Styling", url: "https://tailwindcss.com", icon: <TechIcon src="/tech-icons/tailwind.svg" alt="Tailwind CSS" /> },
   { name: "shadcn/ui", description: "Component library", url: "https://ui.shadcn.com", icon: <TechIcon src="/tech-icons/shadcn.svg" alt="shadcn/ui" className="dark:invert-100" /> },
-  { name: "Motion", description: "Animations", url: "https://motion.dev", icon: <TechIcon src="/tech-icons/motion.png" alt="Motion" /> },
+  { name: "Motion", description: "Animations", url: "https://m.dev", icon: <TechIcon src="/tech-icons/m.png" alt="Motion" /> },
   { name: "Luxon", description: "Date/time handling", url: "https://moment.github.io/luxon", icon: <TechIcon src="/tech-icons/luxon.png" alt="Luxon" /> },
   { name: "webextension-polyfill", description: "Cross-browser support", url: "https://github.com/mozilla/webextension-polyfill", icon: <TechIcon src="/tech-icons/moz.png" alt="webextension-polyfill" /> },
 ]
@@ -44,7 +44,7 @@ export function InfoPanel() {
       description="A browser extension to track Giant Bomb's live shows and upcoming schedule."
     >
       <div className="space-y-4">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.1 }}
@@ -54,7 +54,7 @@ export function InfoPanel() {
           </h4>
           <div className="space-y-1">
             {LINKS.map((link, index) => (
-              <motion.a
+              <m.a
                 key={link.url}
                 href={link.url}
                 target="_blank"
@@ -67,14 +67,14 @@ export function InfoPanel() {
                 {link.icon}
                 <span className="flex-1">{link.label}</span>
                 <ExternalLink className="size-3 text-muted-foreground" />
-              </motion.a>
+              </m.a>
             ))}
           </div>
-        </motion.div>
+        </m.div>
 
         <Separator />
 
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.2 }}
@@ -84,7 +84,7 @@ export function InfoPanel() {
           </h4>
           <div className="grid grid-cols-2 gap-1">
             {TECH_STACK.map((tech, index) => (
-              <motion.a
+              <m.a
                 key={tech.name}
                 href={tech.url}
                 target="_blank"
@@ -101,21 +101,21 @@ export function InfoPanel() {
                     {tech.description}
                   </span>
                 </span>
-              </motion.a>
+              </m.a>
             ))}
           </div>
-        </motion.div>
+        </m.div>
 
         <Separator />
 
-        <motion.p
+        <m.p
           className="text-xs text-muted-foreground text-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3, delay: 0.3 }}
         >
           Made with 💣 by Jacob Jordan
-        </motion.p>
+        </m.p>
       </div>
     </Page>
   )

@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Crown } from "lucide-react"
-import { motion } from "motion/react"
+import { m } from "motion/react"
 import { AsyncImage } from "./AsyncImage"
 import type { UpcomingShow } from "@/types/giantbomb"
 import { formatShowDate } from "@/lib/format"
@@ -13,7 +13,7 @@ interface ShowCardProps {
 
 export function ShowCard({ show }: ShowCardProps) {
   return (
-    <motion.div variants={itemVariants}>
+    <m.div variants={itemVariants}>
       <Card className="hover:bg-accent duration-500 transition-colors gap-0 p-4">
         <CardContent className="p-0">
           <div className="flex gap-3">
@@ -28,9 +28,9 @@ export function ShowCard({ show }: ShowCardProps) {
                   {show.title}
                 </h4>
                 {show.premium && (
-                  <motion.div
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
+                  <m.div
+                    initial={{ scale: 0.95, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 0.3, delay: 0.1 }}
                   >
                     <Badge
@@ -40,7 +40,7 @@ export function ShowCard({ show }: ShowCardProps) {
                       <Crown />
                       Premium
                     </Badge>
-                  </motion.div>
+                  </m.div>
                 )}
               </div>
               <p className="text-xs text-red-500">{show.type}</p>
@@ -51,6 +51,6 @@ export function ShowCard({ show }: ShowCardProps) {
           </div>
         </CardContent>
       </Card>
-    </motion.div>
+    </m.div>
   )
 }
