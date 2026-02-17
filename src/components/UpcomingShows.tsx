@@ -31,8 +31,8 @@ export function UpcomingShows({ shows, isLive }: UpcomingShowsProps) {
           animate="show"
           layout
         >
-          {shows.map((show) => (
-            <m.div key={`${show.title}-${show.date}`} variants={itemVariants}>
+          {shows.map((show, i) => (
+            <m.div key={`${i}-${show.title}-${show.date}`} variants={itemVariants}>
               <ShowCard show={show} />
             </m.div>
           ))}
