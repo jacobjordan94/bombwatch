@@ -3,14 +3,16 @@ import { createRoot } from "react-dom/client"
 import { LazyMotion, domAnimation, MotionConfig } from "motion/react"
 
 import "./index.css"
-import _App from "./App.tsx"
+import App from "./App.tsx"
 
-const App = () => import.meta.env.PROD ? <_App /> : <StrictMode><_App/></StrictMode>;
+const root = (
+  <LazyMotion features={domAnimation}>
+    <MotionConfig reducedMotion="user">
+      <App />
+    </MotionConfig>
+  </LazyMotion>
+)
 
 createRoot(document.getElementById("root")!).render(
-    <LazyMotion features={domAnimation}>
-      <MotionConfig reducedMotion="user">
-        <App />
-      </MotionConfig>
-    </LazyMotion>
+  import.meta.env.PROD ? root : <StrictMode>{root}</StrictMode>
 )
